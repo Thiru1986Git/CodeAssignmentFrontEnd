@@ -1,4 +1,4 @@
-app.factory("dateFormater", function() {
+app.factory("dateFormatter", function() {
 	return {
 		convertDate : function(inputFormat) {
 			function format(sec) {
