@@ -1,0 +1,54 @@
+body { padding: 5% }
+
+.content {
+  margin-top: 50px;
+  line-height: 1.8;
+}
+
+table th,input[type="file"] {
+  cursor:pointer;
+}
+
+table, td, th  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+table {
+  width:100%;
+}
+body .upload_file, body .filter_table{
+   margin : 50px;
+}
+
+body span.upload_file {
+    float:left
+}
+
+body span.filter_table {
+    float:right
+}
+table tr {
+    background:#a0a0a0;
+}
+table .table_data:nth-child(odd) {
+    background:#e0e0e0;
+}
+
+table .table_data:nth-child(even) {
+    background:#fff;
+}
+
+body .header {
+    padding: 20px 0px;
+    background: #e0e0e0;
+    text-align: center;
+}
+
+tr.empty_row td{
+text-align: center;
+    height: 150px;
+    background: #fff;
+}
+

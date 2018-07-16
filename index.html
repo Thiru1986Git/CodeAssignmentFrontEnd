@@ -1,0 +1,40 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="./styles/style.css">
+<script src="./scripts/angular.min.js"></script>
+<script src="./scripts/app.js"></script>
+<script src="./scripts/services/dateFormater.js"></script>
+<script src="./scripts/services/csvService.js"></script>
+<script src="./scripts/directives/fileReader.js"></script>
+<script src="./scripts/controllers/mainController.js"></script>
+</head>
+<body ng-app="CSVApp" ng-controller="MainCtrl as $ctrl">
+	<h1 class="header">{{$ctrl.title}}</h1>
+	<span class="upload_file">Upload File: <input type="file"
+		accept=".csv" file-reader-directive file-reader="$ctrl.fileContent" /></span>
+	<span class="filter_table">Filter by Issue count: <input
+		type="number" ng-model="issue"></span>
+	<div ng-if="$ctrl.fileContent" class="content">
+		<table>
+			<tr>
+				<th>First name</th>
+				<th>Sur name</th>
+				<th>Issue count</th>
+				<th>Date of birth</th>
+			</tr>
+			<tbody>
+				<tr class="table_data"
+					ng-repeat="tableData in $ctrl.fileContent | filter:{Issuecount:(issue || '')}">
+					<td>{{tableData.Firstname}}</td>
+					<td>{{tableData.Surname}}</td>
+					<td>{{tableData.Issuecount}}</td>
+					<td>{{tableData.Dateofbirth}}</td>
+				</tr>
+				<tr class="empty_row" ng-if="!tableData.length">
+					<td colspan="4" ng-if="$ctrl.fileContent.length === 0">{{$ctrl.emptyTable}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
