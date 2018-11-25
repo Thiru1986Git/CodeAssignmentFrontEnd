@@ -1,10 +1,10 @@
-app.directive('fileReaderDirective', function(csvService) {
+app.directive('fileReader', function(csvService) {
 	return {
-		scope : {
-			fileReader : "="
+		scope: {
+			fileReader: "="
 		},
 
-		link : function(scope, element) {
+		link: function(scope, element) {
 			element.on('change', function(changeEvent) {
 				var files = changeEvent.target.files;
 				if (!files || (files && !files.length))

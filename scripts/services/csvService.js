@@ -14,7 +14,7 @@ app
 						var str = csv.replace(/"/g, ""), lines = str
 								.split("\r\n"), result = [], headers = lines[0]
 								.split(",");
-						for (var i = 1; i < lines.length; i++) {
+						for (var i = 1; i < lines.length - 1; i++) {
 							var obj = {}, currentline = lines[i].split(",");
 							for (var j = 0; j < headers.length; j++) {
 								headers[j] = headers[j].replace(/ /g, '');

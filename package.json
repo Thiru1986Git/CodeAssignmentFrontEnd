@@ -1,0 +1,25 @@
+{
+  "name": "code-assignment-fe",
+  "version": "1.0.0",
+  "description": "Front end assignment application",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.6.0"
+  },
+  "scripts": {
+    "start": "http-server ./ -a localhost -p 8000 -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thiru1986Git/CodeAssignmentFrontEnd.git"
+  },
+  "author": "Thiru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thiru1986Git/CodeAssignmentFrontEnd/issues"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  },
+  "homepage": "https://github.com/Thiru1986Git/CodeAssignmentFrontEnd#readme"
+}
